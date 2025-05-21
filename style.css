@@ -1,6 +1,13 @@
-body{
-     background-color: rgb(198, 213, 235);
+body {
+    font-family: 'ADLaM Display';
+    background-image: url(Images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
 }
+
 
 /*Top bars */
 #Topbar
@@ -57,16 +64,18 @@ body{
 .navbar
 {
    margin-top: 12px;
-   font-family: 'ADLaM Display';
+   
    display: flex;
    gap: 40px;
    font-size: 25px;
 }
 
+/* catergories */
+
 #cato
 {
     text-align: center;
-    font-family: 'ADLaM Display';
+  
 }
 
 .iteamcards .Electronics ,.categories
@@ -74,7 +83,7 @@ body{
   display: flex;
   margin-top: 2%;
   margin-left: 5%;
-  gap: 30px;
+  gap: 50px;
   cursor: pointer;
   margin-left: 20%;
 }
@@ -86,21 +95,39 @@ transform: scale(1.20);
 
 
 
-
-
-
-
-.categories img
-{
+.categories img {
   width: 100%;
+  max-width: 200px;  /* prevents it from getting too large */
   height: auto;
-  max-height: 200px; 
   object-fit: contain;
-  margin-bottom: 5px;
   border-radius: 15%;
 }
 
+/* Top Picks */
+.topPicks {
+  width: 60%;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  margin: 5% auto;     
+  text-align: left;    
+  padding: 10px;   
+  overflow: auto;
+   
+}
 
+#picks {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.iteams
+{
+ margin-top: 20px;  
+cursor: pointer;
+
+   
+}
 
 
 
