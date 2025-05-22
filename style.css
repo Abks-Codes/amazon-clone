@@ -98,13 +98,14 @@ body {
 }
 
 .topPicks {
-    width: 90%;
-    background-color: white;
+    width:90%;
+    background-color: rgb(255, 255, 255);
+     opacity: 0.85;
     margin: 5% auto;
     padding: 20px;
     overflow-x: auto;
     white-space: nowrap;
-    border-radius: 10px;
+    border-radius: 90px;
 }
 
 #picks {
@@ -115,7 +116,9 @@ body {
 
 .iteams a {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
+    opacity: 10.0;
+    cursor: pointer;
 }
 
 /* ------------------ Responsive Design ------------------ */
