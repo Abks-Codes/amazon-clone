@@ -4,130 +4,158 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
     margin: 0;
 }
 
-
-/*Top bars */
-#Topbar
-{
+#Topbar {
     background-color: rgb(151, 157, 230);
     width: 100%;
-    height: 50px;
-   display: flex;
-    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 10px;
+    box-sizing: border-box;
 }
 
-#logo
-{
-    padding-top: 1%;
-    padding-left: 1%;
+#logo img {
+    max-width: 100px;
+    height: auto;
 }
 
-  #searchBar {
+#searchBar {
     display: flex;
     align-items: center;
     flex: 1;
-    padding-top: 15px; 
-    padding-left: 7px;
-   padding-right: 1em;
+    max-width: 600px;
+    min-width: 200px;
+    gap: 10px;
+}
 
-  }
-
-  #search {
-    flex: 1; /* input takes all available space */
+#search {
+    flex: 1;
     padding: 8px 12px;
     font-size: 16px;
     border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
-  }
-
-  #searchBtn button {
+#searchBtn button {
     padding: 8px 16px;
     font-size: 16px;
     cursor: pointer;
-      border-radius: 5px;
-  }
-
-  #searchIcon
-  {
+    border-radius: 5px;
+    border: none;
     background-color: rgb(235, 210, 103);
-  }
-
-#searchIcon:hover { background-color: rgb(189, 164, 54); }
-
-
-
-/*navigation bar */
-
-.navbar
-{
-   margin-top: 12px;
-   
-   display: flex;
-   gap: 40px;
-   font-size: 25px;
 }
 
-/* catergories */
+#searchBtn button:hover {
+    background-color: rgb(189, 164, 54);
+}
 
-#cato
-{
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.navbar div a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+#cato {
     text-align: center;
-  
+    font-size: 28px;
+    margin-top: 40px;
+    color: white;
 }
 
-.iteamcards .Electronics ,.categories
-{
-  display: flex;
-  margin-top: 2%;
-  margin-left: 5%;
-  gap: 50px;
-  cursor: pointer;
-  margin-left: 20%;
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 10px;
 }
-
-.categories :hover img 
-{
-transform: scale(1.20);
-}
-
-
 
 .categories img {
-  width: 100%;
-  max-width: 200px;  /* prevents it from getting too large */
-  height: auto;
-  object-fit: contain;
-  border-radius: 15%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15%;
+    transition: transform 0.3s ease;
 }
 
-/* Top Picks */
+.categories:hover img:hover {
+    transform: scale(1.2);
+}
+
 .topPicks {
-  width: 60%;
-  height: 300px;
-  background-color: rgb(255, 255, 255);
-  margin: 5% auto;     
-  text-align: left;    
-  padding: 10px;   
-  overflow: auto;
-   
+    width: 90%;
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 10px;
 }
 
 #picks {
-  margin: 0;
-  padding: 0;
-  
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.iteams
-{
- margin-top: 20px;  
-cursor: pointer;
-
-   
+.iteams a {
+    display: inline-block;
+    margin-right: 10px;
 }
 
+/* ------------------ Responsive Design ------------------ */
+@media (max-width: 768px) {
+    #Topbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
+    #searchBar {
+        flex-direction: row;
+        width: 100%;
+    }
 
+    .navbar {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categories img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .topPicks {
+        width: 95%;
+        overflow-x: auto;
+    }
+
+    #search {
+        font-size: 14px;
+    }
+
+    #searchBtn button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
